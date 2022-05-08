@@ -1,4 +1,5 @@
 export const gas = {
+    feeCurrencies: CGAS,
     send: 80000,
     vote: 80000,
     delegate: 180000,
