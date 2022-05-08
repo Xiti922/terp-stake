@@ -42,7 +42,7 @@ const chainConfig = {
             coinGeckoId,
         },
     ],
-    feeCurrencies: [
+    feeCurrencies: config.FEE_CURRENCY, [
         {
             coinDenom,
             coinMinimalDenom,
