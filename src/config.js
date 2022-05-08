@@ -1,20 +1,47 @@
 export const config = {
-    RPC_URL: 'https://rpc-chronic.zenchainlabs.io',
-    REST_URL: 'https://api-chronic.zenchainlabs.io',
-    EXPLORER_URL: 'https://chronic.zenscan.io',
-    STAKING_URL: 'https://try-2.vercel.app/stake',
-    NETWORK_NAME: 'Chronic',
-    NETWORK_TYPE: 'mainnet',
-    CHAIN_ID: 'morocco-1',
-    CHAIN_NAME: 'Morocco-1',
-    COIN_DENOM: 'CHT',
-    COIN_MINIMAL_DENOM: 'ucht',
-    COIN_DECIMALS: 6,
-    PREFIX: 'chronic',
-    COIN_TYPE: 118,
-    COINGECKO_ID: 'chronic',
-    GAS_PRICE_STEP_LOW: 0.001,
-    GAS_PRICE_STEP_AVERAGE: 0.01,
-    GAS_PRICE_STEP_HIGH: 0.05,
-    FEATURES: ['ibc-transfer', 'ibc-go'],
-};
+    RPC_URL: "https://rpc-chronic.zenchainlabs.io/",
+    REST_URL: "https://api-chronic.zenchainlabs.io/",
+    chainId: "morocco-1",
+    chainName: "Chronic-Token",
+    stakeCurrency: {
+      coinDenom: "CHT",
+      coinMinimalDenom: "ucht",
+      coinDecimals: 6,
+    },
+    bip44: {
+      coinType: 118,
+    },
+     "bech32Config": {
+        "bech32PrefixAccAddr": "chronic",
+        "bech32PrefixAccPub": "chronicpub",
+        "bech32PrefixValAddr": "chronicvaloper",
+        "bech32PrefixValPub": "chronicvaloperpub",
+        "bech32PrefixConsAddr": "chronicvalcons",
+        "bech32PrefixConsPub": "chronicvalconspub"
+    },
+    currencies: [
+      {
+        coinDenom: "CHT",
+        coinMinimalDenom: "ucht",
+        coinDecimals: 6,
+      },
+      {
+        coinDenom: "CGAS",
+        coinMinimalDenom: "ucgas",
+        coinDecimals: 6,
+      },
+    ],
+    feeCurrencies: [
+      {
+        coinDenom: "CGAS",
+        coinMinimalDenom: "ucgas",
+        coinDecimals: 6,
+      },
+    ],
+    gasPriceStep: {
+      low: 0.001,
+      average: 0.0025,
+      high: 0.003,
+    },
+    features: ["ibc-go"],
+   });
