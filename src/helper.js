@@ -10,6 +10,7 @@ const coinDenom = config.COIN_DENOM;
 const coinMinimalDenom = config.COIN_MINIMAL_DENOM;
 const coinDecimals = config.COIN_DECIMALS;
 const prefix = config.PREFIX;
+const feeCurrencies = config.FEECURRENCIES
 const coinGeckoId = config.COINGECKO_ID;
 
 const chainConfig = {
