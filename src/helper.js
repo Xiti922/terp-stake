@@ -43,13 +43,14 @@ const chainConfig = {
             coinGeckoId,
         },
     ],
-    feeCurrencies: config.FEE_CURRENCY, 
+    feeCurrencies: [
         {
             coinDenom,
             coinMinimalDenom,
             coinDecimals,
             coinGeckoId,
         },
+     ],
     coinType: config.COIN_TYPE,
     gasPriceStep: {
         low: config.GAS_PRICE_STEP_LOW,
