@@ -10,7 +10,7 @@ export const config = {
     COIN_DENOM: 'CHT',
     COIN_MINIMAL_DENOM: 'ucht',
     COIN_DECIMALS: 6,
-    PREFIX: 'cht',
+    PREFIX: 'chronic',
     COIN_TYPE: 118,
     COINGECKO_ID: 'chronic',
     GAS_PRICE_STEP_LOW: 0.001,
