@@ -44,4 +44,4 @@ export const config = {
       high: 0.003,
     },
     features: ["ibc-go"],
-   });
+   };
