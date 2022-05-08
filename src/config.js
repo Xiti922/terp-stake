@@ -10,6 +10,7 @@ export const config = {
     COIN_DENOM: 'CHT',
     COIN_MINIMAL_DENOM: 'ucht',
     COIN_DECIMALS: 6,
+    FEE_CURRENCY: 'CGAS',
     PREFIX: 'chronic',
     COIN_TYPE: 118,
     COINGECKO_ID: 'chronic',
