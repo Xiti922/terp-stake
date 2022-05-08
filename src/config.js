@@ -13,6 +13,7 @@ export const config = {
     PREFIX: 'chronic',
     COIN_TYPE: 118,
     COINGECKO_ID: 'chronic',
+    FEECURRENCIES: 'CGAS'
     GAS_PRICE_STEP_LOW: 0.001,
     GAS_PRICE_STEP_AVERAGE: 0.01,
     GAS_PRICE_STEP_HIGH: 0.05,
