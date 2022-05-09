@@ -19,10 +19,10 @@ const chainConfig = {
     rpc: RPC_URL,
     rest: REST_URL,
     stakeCurrency: {
-        coinDenom,
-        coinMinimalDenom,
+        coinDenom: 'CHT',
+        coinMinimalDenom: 'ucht',
         coinDecimals,
-        coinGeckoId,
+        coinGeckoId: config.COINGECKO_ID,
     },
     bip44: {
         coinType: 118,
@@ -45,8 +45,8 @@ const chainConfig = {
     ],
     feeCurrencies: [
         {
-            coinDenom,
-            coinMinimalDenom,
+            coinDenom: 'CGAS',
+            coinMinimalDenom: 'ucgas',
             coinDecimals,
             coinGeckoId,
         },
@@ -69,7 +69,54 @@ export const initializeChain = (cb) => {
         } else {
             if (window.keplr.experimentalSuggestChain) {
                 try {
-                    await window.keplr.experimentalSuggestChain(chainConfig);
+             await window.keplr.experimentalSuggestChain({
+                   rpc: "https://rpc-chronic.zenchainlabs.io/",
+    rest: "https://api-chronic.zenchainlabs.io/",
+    chainId: "morocco-1",
+    chainName: "Chronic-Token",
+    stakeCurrency: {
+      coinDenom: "CHT",
+      coinMinimalDenom: "ucht",
+      coinDecimals: 6,
+    },
+    bip44: {
+      coinType: 118,
+    },
+     "bech32Config": {
+        "bech32PrefixAccAddr": "chronic",
+        "bech32PrefixAccPub": "chronicpub",
+        "bech32PrefixValAddr": "chronicvaloper",
+        "bech32PrefixValPub": "chronicvaloperpub",
+        "bech32PrefixConsAddr": "chronicvalcons",
+        "bech32PrefixConsPub": "chronicvalconspub"
+    },
+    currencies: [
+      {
+        coinDenom: "CHT",
+        coinMinimalDenom: "ucht",
+        coinDecimals: 6,
+      },
+      {
+        coinDenom: "CGAS",
+        coinMinimalDenom: "ucgas",
+        coinDecimals: 6,
+      },
+    ],
+    feeCurrencies: [
+      {
+        coinDenom: "CGAS",
+        coinMinimalDenom: "ucgas",
+        coinDecimals: 6,
+      },
+    ],
+    gasPriceStep: {
+      low: 0.001,
+      average: 0.0025,
+      high: 0.003,
+    },
+    features: ["ibc-go"],
+   });                  
+                await window.keplr.experimentalSuggestChain(chainConfig);
                 } catch (error) {
                     const chainError = 'Failed to suggest the chain';
                     cb(chainError);
