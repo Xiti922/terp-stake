@@ -1,12 +1,12 @@
-inSync by OmniFlix (for Communities)
+Terp-Stake (for Communities)
 ===
 
-inSync is a collaborative interface for an entire community (or) blockchain network to:
+Terp-Stake is a collaborative interface for an entire community (or) blockchain network to:
 
 - identify stakeholders such as validator node hosts (will expand to other types of node hosts depending on the network)
 - discover proposals & more!
 
-Currently, the aim of inSync is to be the default/defacto interface when bootstrapping community activities of a
+Currently, the aim of Terp-Stake is to be the default/defacto interface when bootstrapping community activities of a
 specific chain (on testnet or mainnet).
 
 # Requirements
