@@ -1,6 +1,6 @@
 export const config = {
-    RPC_URL: 'https://rpc-chronic.zenchainlabs.io',
-    REST_URL: 'https://api-chronic.zenchainlabs.io',
+    RPC_URL: 'https://chtd-rpc.skynetvalidators.com',
+    REST_URL: 'https://api-rpc.skynetvalidators.com',
     EXPLORER_URL: 'https://chronic.zenscan.io',
     STAKING_URL: 'https://try-2.vercel.app/stake',
     NETWORK_NAME: 'Chronic',
